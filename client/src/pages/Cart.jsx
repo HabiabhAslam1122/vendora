@@ -122,7 +122,7 @@ function Cart() {
           </Link>
         </div>
       ) : (
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 340px', gap: '2rem', alignItems: 'start' }}>
+        <div className="cart-layout-grid">
           {/* Cart Item List */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             {items.map((item) => (
