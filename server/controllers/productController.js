@@ -9,7 +9,7 @@ const createProduct = async (req, res) => {
     if (req.file) {
       imagePath = req.file.path.startsWith('http')
         ? req.file.path
-        : `http://localhost:5000/uploads/${req.file.filename}`;
+        : `https://vendora-nilz.onrender.com/uploads/${req.file.filename}`;
     }
 
     const product = await Product.create({
@@ -117,7 +117,7 @@ const updateProduct = async (req, res) => {
     if (req.file) {
       product.image = req.file.path.startsWith('http')
         ? req.file.path
-        : `http://localhost:5000/uploads/${req.file.filename}`;
+        : `https://vendora-nilz.onrender.com/uploads/${req.file.filename}`;
     }
 
     const updatedProduct = await product.save();
