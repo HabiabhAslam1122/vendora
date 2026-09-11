@@ -14,7 +14,7 @@ const createPaymentIntent = async (req, res) => {
     }
 
     const totalAmount = cart.items.reduce(
-      (sum, item) => sum + item.product.price * item.quantity,
+      (sum, item) => sum + (item.product ? item.product.price * item.quantity : 0),
       0
     );
 
